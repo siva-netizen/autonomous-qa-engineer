@@ -1,5 +1,6 @@
 # Kept for pip users; uv should use: uv sync (see [dependency-groups] in pyproject.toml)
 pytest==8.3.5
+hypothesis>=6.120.0
 mypy==1.15.0
 textual>=0.86.0
 mcp>=1.6.0

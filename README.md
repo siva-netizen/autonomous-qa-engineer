@@ -83,6 +83,7 @@ Never commit `.env`. Offline tests use a fake transport and do not require a pro
 - Agent contracts: `.kiro/agents/`
 - Reusable Skills: `.kiro/skills/`
 - Hooks: `.kiro/hooks/` (includes `agent-on-spec-change.json` to invoke Requirement Analyzer on spec edits)
+- Property-based testing (IDE): `.kiro/specs/agent-output-contracts/correctness.md` and `pytest tests/unit/test_agent_output_contracts_pbt.py -m property`
 - Runtime agent prompts: loaded from `.kiro/agents/*.md` via `agents/kiro_contracts.py`
 
 Interactive TUI (`python -m agents.tui`): free-form QA chat, `/agent <role> <prompt>` with real file/MCP-preflight tools, and `/flow <goal>` for analyzer → planner → playwright-engineer (writes `tests/e2e/generated/*.spec.ts`). IDE Playwright MCP is configured in `.kiro/settings/mcp.json`; see `docs/MCP.md` for IDE vs Python behavior.

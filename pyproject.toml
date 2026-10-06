@@ -11,6 +11,7 @@ requires-python = ">=3.11"
 [dependency-groups]
 dev = [
   "pytest==8.3.5",
+  "hypothesis>=6.120.0",
   "mypy==1.15.0",
   "textual>=0.86.0",
   "mcp>=1.6.0",
@@ -24,7 +25,10 @@ include = ["agents*", "services*", "playwright*", "qa_mcp*", "reports*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests/unit", "tests/integration"]
-addopts = "-ra"
+addopts = "-ra -m \"not property\""
+markers = [
+  "property: Kiro Spec Correctness / property-based tests (run explicitly in IDE)",
+]
 
 [tool.mypy]
 python_version = "3.11"
