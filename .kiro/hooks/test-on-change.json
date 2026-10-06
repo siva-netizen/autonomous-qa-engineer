@@ -1,0 +1,13 @@
+{
+  "name": "Run tests on change",
+  "description": "Run deterministic Python tests and the inspected Playwright suite when agent, service, test, or feature-spec files change.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["agents/**/*.py", "services/**/*.py", "playwright/**/*.py", "qa_mcp/**/*.py", "reports/**/*.py", "tests/**/*.py", ".kiro/specs/**/*.md"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "python -m pytest -q"
+  }
+}

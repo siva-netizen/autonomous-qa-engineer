@@ -1,0 +1,13 @@
+{
+  "name": "Analyze requirements on spec change",
+  "description": "Invoke the Requirement Analyzer when feature requirement specs change so traceability stays aligned.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [".kiro/specs/**/requirements.md"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "python -m agents.run --agents requirement-analyzer --request-id REQ-HOOK-001 --prompt \"Reconcile changed requirements with existing REQ-RA IDs and flag ambiguity.\" --requirement-ids REQ-RA-001"
+  }
+}

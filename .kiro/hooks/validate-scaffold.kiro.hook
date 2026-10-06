@@ -1,0 +1,13 @@
+{
+  "name": "Validate scaffold on change",
+  "description": "Run the dependency-free scaffold validator when project structure or source files change.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["src/**/*.ts", "tests/**/*.ts", ".kiro/**/*.md", "*.json"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "npm run validate:scaffold"
+  }
+}

@@ -1,0 +1,31 @@
+node_modules/
+.env
+.env.*
+!.env.example
+playwright-report/
+test-results/
+artifacts/
+coverage/
+.DS_Store
+shopdemo/
+
+# IDE / local editor
+.cursor/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo

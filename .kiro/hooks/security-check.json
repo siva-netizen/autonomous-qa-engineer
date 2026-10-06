@@ -1,0 +1,13 @@
+{
+  "name": "Security check on change",
+  "description": "Scan implementation and committed configuration for secret-shaped values and unsafe prompt-injection markers.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["agents/**/*.py", "services/**/*.py", "qa_mcp/**/*.py", ".env.example", ".kiro/**/*.md", ".kiro/settings/*.json"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "python scripts/security_scan.py"
+  }
+}

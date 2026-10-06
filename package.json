@@ -1,0 +1,23 @@
+{
+  "name": "autonomous-qa-engineer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.20.2"
+  },
+  "scripts": {
+    "validate:scaffold": "node scripts/validate-scaffold.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.52.0",
+    "@types/node": "22.15.21",
+    "prettier": "3.5.3",
+    "typescript": "5.8.3",
+    "vitest": "3.1.2"
+  }
+}

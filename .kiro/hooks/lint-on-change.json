@@ -1,0 +1,13 @@
+{
+  "name": "Lint and type check on change",
+  "description": "Compile Python modules and run the repository's deterministic scaffold validation after Python changes.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["agents/**/*.py", "services/**/*.py", "playwright/**/*.py", "qa_mcp/**/*.py", "reports/**/*.py"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "python -m compileall -q agents services playwright mcp reports && python -m mypy agents services playwright mcp reports && npm run validate:scaffold"
+  }
+}
