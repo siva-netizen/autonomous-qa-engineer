@@ -94,6 +94,4 @@ Interactive TUI (`python -m agents.tui`): free-form QA chat, `/agent <role> <pro
 
 A generated test is not an executed test. Reports distinguish `generated`, `executed`, and `verified`, preserve evidence paths, and classify uncertain failures as uncertain. A pass requires a real Playwright/MCP execution record.
 
-## GitHub identity
 
-The local Git author is configured as `siva-netizen <sivasabarivel008@gmail.com>`. GitHub CLI account authentication is separate and requires an interactive login for the `siva-netizen` account; no provider key is used for that login.
